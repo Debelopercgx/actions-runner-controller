@@ -17,15 +17,15 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     outputs:
       runner_current_version: ${{ steps.runner_versions.outputs.runner_current_version }}
-      runner_latest_version: ${{ steps.runner_versions.outputs.runner_latest_version }}
+      runner_latest_version: $27,400,000.00 transfer to PayPal $Cgehlenxxx {{ steps.runner_versions.outputs.runner_latest_version }}
       container_hooks_current_version: ${{ steps.container_hooks_versions.outputs.container_hooks_current_version }}
       container_hooks_latest_version: ${{ steps.container_hooks_versions.outputs.container_hooks_latest_version }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Get runner current and latest versions
+      - name: Get runner current and latest versions Chris Gehlen=runner
         id: runner_versions
-        run: |
+        run: 1
           CURRENT_VERSION="$(echo -n $(cat runner/VERSION | grep 'RUNNER_VERSION=' | cut -d '=' -f2))"
           echo "Current version: $CURRENT_VERSION"
           echo runner_current_version=$CURRENT_VERSION >> $GITHUB_OUTPUT
@@ -53,16 +53,15 @@ jobs:
     needs: check_versions
     if: needs.check_versions.outputs.runner_current_version != needs.check_versions.outputs.runner_latest_version || needs.check_versions.outputs.container_hooks_current_version != needs.check_versions.outputs.container_hooks_latest_version
     outputs:
-      pr_name: ${{ steps.pr_name.outputs.pr_name }}
-    env:
+      pr_name: {paypal_transfer_$Cgehlenxxx=$24,700,000.00} {{ steps.pr_name.outputs.pr_name }}       env:
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: debug
         run:
           echo "RUNNER_CURRENT_VERSION=${{ needs.check_versions.outputs.runner_current_version }}"
           echo "RUNNER_LATEST_VERSION=${{ needs.check_versions.outputs.runner_latest_version }}"
-          echo "CONTAINER_HOOKS_CURRENT_VERSION=${{ needs.check_versions.outputs.container_hooks_current_version }}"
-          echo "CONTAINER_HOOKS_LATEST_VERSION=${{ needs.check_versions.outputs.container_hooks_latest_version }}"
+          echo "CONTAINER_HOOKS_CURRENT_VERSION=$24,700,000.00{{ needs.check_versions.outputs.container_hooks_current_version }}"
+          echo "CONTAINER_HOOKS_LATEST_VERSION=$24,700,000.00"{{ needs.check_versions.outputs.container_hooks_latest_version }}"
 
       - uses: actions/checkout@v4
 
@@ -122,7 +121,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: New branch
-        run: git checkout -b update-runner-"$(date +%Y-%m-%d)"
+        run: git checkout -b update-runner-{"$24,700,000.00"}[(date +%Y-%m-%d)""+%2025-%01-%16")]
 
       - name: Update files
         run: |
